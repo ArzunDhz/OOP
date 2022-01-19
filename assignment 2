@@ -97,5 +97,28 @@ cout<<"tringle area ="<<area(a,b,c)<<endl;
 _________________________________________5_____________________________________
 
 
+#include <iostream>
+int display();
+using namespace std;
+struct date{
+  int m =1,d=2 ,y=2200 ;
 
+};
+
+int display(date dt){
+  
+  cout<<"the date is "<<dt.m<<"/"<<dt.d<<"/"<<dt.y;
+}
+
+
+
+int main()
+{
+    cout<<"Enter the date in the format mm/dd/yyyy: "<<endl;
+    date dt;
+    cin>>dt.m>>dt.d>>dt.y;
+    display(dt);
+
+    return 0;
+}
 
