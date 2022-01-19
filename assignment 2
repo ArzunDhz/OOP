@@ -133,7 +133,7 @@ struct height{
 
 int display(height h){
 
-  cout<<"the date is "<<h.f<<"feet  "<<h.i<<"inch  ";
+  cout<<"the date is "<<h.f<<"'"<<h.i<<"";
 }
 
 
@@ -142,7 +142,7 @@ int main()
     cout<<"Enter the height  in the format feet inch "<<endl;
     height h;
     cin>>h.f>>h.i;
-    if(h.i>12){
+    if(h.i>=12){
         h.f = h.f + h.i/12;
         h.i= h.i%12;
     }
