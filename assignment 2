@@ -139,7 +139,7 @@ int main(){
   int r;
 cout<<"value of radious";
 cin>>r;
-cout<<"areais "<<area(r);
+cout<<"area is "<<area(r);
 
 
 }
@@ -148,7 +148,7 @@ ____________________________________________7___________________________________
 #include <iostream>
 
 using namespace std;
-float area(int a){
+int area(int a){
   return 3.14*a*a;
 }
 int area(int a,int b, int c){
