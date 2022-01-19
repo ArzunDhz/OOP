@@ -122,3 +122,31 @@ int main()
     return 0;
 }
 
+_____________________________________________________________9______________________________________
+#include <iostream>
+
+using namespace std;
+struct height{
+  int f , i;
+
+};
+
+int display(height h){
+
+  cout<<"the date is "<<h.f<<"feet  "<<h.i<<"inch  ";
+}
+
+
+int main()
+{
+    cout<<"Enter the height  in the format feet inch "<<endl;
+    height h;
+    cin>>h.f>>h.i;
+    if(h.i>12){
+        h.f = h.f + h.i/12;
+        h.i= h.i%12;
+    }
+    display(h);
+
+    return 0;
+}
