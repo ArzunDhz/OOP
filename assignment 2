@@ -146,26 +146,24 @@ cout<<"area is "<<area(r);
 ____________________________________________7_______________________________________
 
 #include <iostream>
-
+#include<cmath>
 using namespace std;
 int area(int a){
   return 3.14*a*a;
 }
 int area(int a,int b, int c){
   int s = (a+b+c)/2;
-  return (s*(s-a)*(s-b)*(s-c));
+  return (sqrt(s*(s-a)*(s-b)*(s-c)));
 }
  int area(int a ,int b){
   return a*b;
 }
 int main(){
-  int a,b,c;
-  cout<<"input a , b ,c";
-  cin>>a>>b>>c;
-cout<<"circle area ="<<area(a)<<endl;
-cout<<"reatranglearea ="<<area(a,b)<<endl;
-cout<<"tringle area ="<<area(a,b,c)<<endl;
+cout<<"circle area ="<<area(5)<<endl;
+cout<<"reatrangle area ="<<area(5,6)<<endl;
+cout<<"tringle area ="<<area(5,6,7)<<endl;
 }
+
 _________________________________________8_____________________________________
 
 
