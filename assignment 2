@@ -38,6 +38,80 @@ cout<<"smaller no is "<<zeroSmaller (a,b);
 
 ________________________________________________3__________________________________________________________________________
 
+#include <iostream>
+
+using namespace std;
+int &greater();
+int x,y;
+
+int main(){
+int s = 1000 ;
+cout<<"enter 2 no";
+cin>>x>>y;
+greater()=s;
+if(x==0){
+    cout<<"smaller temp"<<x<<"greater value"<<y;
+}
+if(y==0){
+    cout<<"smaller value"<<y<<"greater value"<<x;
+}
+else{
+    cout<<"both values ate equal";
+
+}
+return 0;
+}
+
+int &greater(){
+if(x>y){
+    return y ;
+}
+else
+    return x;
+
+
+
+}
+
+
+
+__________________________________________________4___________________________________________________________________
+
+#include <iostream>
+
+using namespace std;
+
+
+int temp(int &a, int &b){
+ if(a > b ){
+   return a;
+ }
+ else{
+   return b ; 
+ }
+}
+
+int main(){
+int a, b;
+int s = 100;
+cout<<"input 2 value of input";
+cin>>a>>b;
+temp(a,b)=s;
+if(a==100){
+cout<<"tepm of a"<<a<<"temp of b"<<b;
+}
+if(b==100){
+cout<<"tepm of a"<<a<<"temp of b"<<b;
+}
+else{
+  cout<<"both are equal";
+}
+
+
+
+}
+
+
 
 
 
