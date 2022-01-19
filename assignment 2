@@ -1,3 +1,75 @@
+
+
+____________________________________________1__________________________________________________________________
+#include <iostream>
+using namespace std;
+
+int hms_to_secs(int h ,int m ,int s ){
+return (h*60*60+m*60+s);
+}
+int main(){
+cout<<"enter hr min sec";
+int a,b,c;
+cin>>a>>b>>c;
+long sec;
+sec = hms_to_secs(a,b,c);
+cout<<sec;
+
+}
+_____________________________________________2______________________________________________________________________
+#include <iostream>
+using namespace std;
+int zeroSmaller(int a , int b ){
+if(a>b){
+    return b;
+}
+else{
+    return a ;
+}
+}
+
+int main(){
+int a,b ;
+cout<<"enter any number";
+cin>>a>>b;
+cout<<"smaller no is "<<zeroSmaller (a,b);
+
+}
+
+________________________________________________3__________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 _______________________________________________________1________________________________
 #include <iostream>
 
