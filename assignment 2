@@ -113,34 +113,31 @@ else{
 
 
 
+________________5___________________
+#inlcude<iostream>
+using namespace std;
 
+struct dist{
+int feet ,inches;
+};
+void scale(dist &dt);
+void display(dist d);
+main(){
+dist d={21,21};
+scale(d)
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void scalse (dist &dt){
+if(dt.inches/12;
+dt.feet= f+dt.feet;
+dt.inches=dt.inches%12;
+}
+dispaly(dt)
+}
+void display(dist d){
+cout<<d.feet<<"'"<<d.inches<<"\"";
+}
 
 
 
