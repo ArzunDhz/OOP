@@ -113,8 +113,8 @@ else{
 
 
 
-________________5___________________
-#inlcude<iostream>
+__________________________________________________________________________5___________________
+#include<iostream>
 using namespace std;
 
 struct dist{
@@ -122,26 +122,123 @@ int feet ,inches;
 };
 void scale(dist &dt);
 void display(dist d);
-main(){
+int main(){
 dist d={21,21};
-scale(d)
+scale(d);
 
 }
 
-void scalse (dist &dt){
-if(dt.inches/12;
-dt.feet= f+dt.feet;
+void scale (dist &dt){
+if(dt.inches>12);
+dt.feet= dt.inches/12+dt.feet;
 dt.inches=dt.inches%12;
+
+display(dt);
 }
-dispaly(dt)
-}
+
+
 void display(dist d){
 cout<<d.feet<<"'"<<d.inches<<"\"";
 }
 
 
+__________________________________________6______________________________
+#include <iostream>
 
-_______________________________________________________10________________________________
+using namespace std;
+
+inline int area(int a){
+  return 3.14*a*a;
+}
+
+int main(){
+  int r;
+cout<<"value of radious";
+cin>>r;
+cout<<"area is "<<area(r);
+
+
+}
+
+____________________________________________7_______________________________________
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int area(int a){
+  return 3.14*a*a;
+}
+int area(int a,int b, int c){
+  int s = (a+b+c)/2;
+  return (sqrt(s*(s-a)*(s-b)*(s-c)));
+}
+ int area(int a ,int b){
+  return a*b;
+}
+int main(){
+cout<<"circle area ="<<area(5)<<endl;
+cout<<"reatrangle area ="<<area(5,6)<<endl;
+cout<<"tringle area ="<<area(5,6,7)<<endl;
+}
+_________________________________________8_____________________________________
+
+
+#include <iostream>
+int display();
+using namespace std;
+struct date{
+  int m ,d ,y ;
+
+};
+
+int display(date dt){
+  
+  cout<<"the date is "<<dt.m<<"/"<<dt.d<<"/"<<dt.y;
+}
+
+
+
+int main()
+{
+    cout<<"Enter the date in the format mm/dd/yyyy: "<<endl;
+    date dt;
+    cin>>dt.m>>dt.d>>dt.y;
+    display(dt);
+
+    return 0;
+}
+
+
+_____________________________________________________________9______________________________________
+#include <iostream>
+
+using namespace std;
+struct height{
+  int f , i;
+
+};
+
+int display(height h){
+
+  cout<<"the date is "<<h.f<<"'"<<h.i<<"";
+}
+
+
+int main()
+{
+    cout<<"Enter the height  in the format feet inch "<<endl;
+    height h;
+    cin>>h.f>>h.i;
+    if(h.i>=12){
+        h.f = h.f + h.i/12;
+        h.i= h.i%12;
+    }
+    display(h);
+
+    return 0;
+}
+
+________________________________________10_____________________________________________________________
 #include <iostream>
 
 using namespace std;
@@ -197,97 +294,5 @@ using namespace std;
  }
 
  }
-__________________________________________6______________________________
-#include <iostream>
-
-using namespace std;
-
-inline int area(int a){
-  return 3.14*a*a;
-}
-
-int main(){
-  int r;
-cout<<"value of radious";
-cin>>r;
-cout<<"area is "<<area(r);
 
 
-}
-____________________________________________7_______________________________________
-
-#include <iostream>
-#include<cmath>
-using namespace std;
-int area(int a){
-  return 3.14*a*a;
-}
-int area(int a,int b, int c){
-  int s = (a+b+c)/2;
-  return (sqrt(s*(s-a)*(s-b)*(s-c)));
-}
- int area(int a ,int b){
-  return a*b;
-}
-int main(){
-cout<<"circle area ="<<area(5)<<endl;
-cout<<"reatrangle area ="<<area(5,6)<<endl;
-cout<<"tringle area ="<<area(5,6,7)<<endl;
-}
-
-_________________________________________8_____________________________________
-
-
-#include <iostream>
-int display();
-using namespace std;
-struct date{
-  int m ,d ,y ;
-
-};
-
-int display(date dt){
-  
-  cout<<"the date is "<<dt.m<<"/"<<dt.d<<"/"<<dt.y;
-}
-
-
-
-int main()
-{
-    cout<<"Enter the date in the format mm/dd/yyyy: "<<endl;
-    date dt;
-    cin>>dt.m>>dt.d>>dt.y;
-    display(dt);
-
-    return 0;
-}
-
-_____________________________________________________________9______________________________________
-#include <iostream>
-
-using namespace std;
-struct height{
-  int f , i;
-
-};
-
-int display(height h){
-
-  cout<<"the date is "<<h.f<<"'"<<h.i<<"";
-}
-
-
-int main()
-{
-    cout<<"Enter the height  in the format feet inch "<<endl;
-    height h;
-    cin>>h.f>>h.i;
-    if(h.i>=12){
-        h.f = h.f + h.i/12;
-        h.i= h.i%12;
-    }
-    display(h);
-
-    return 0;
-}
