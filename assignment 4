@@ -1,0 +1,78 @@
+______________________1______________
+#include <iostream>
+
+using namespace std;
+
+class toConvert{
+private:
+    int f ,c;
+public:
+  int getdata(int a){
+      c=a;
+
+  }
+  int convert(){
+  f=(c*9/5)+32;
+  }
+  int display(){
+  cout<<"f="<<f;
+  }
+
+};
+int main(){
+toConvert c;
+int a;
+cout<<"c=";
+cin>>a;
+c.getdata(a);
+c.convert();
+c.display();
+}
+
+*/
+______________________2______________
+/*
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class Account{
+private:
+    int no,balance;
+    char name[10];
+public:
+  void getdata(int a , char b[20] ,int c){
+      no = a;
+      strcpy(name,b);
+      balance= c;
+
+  }
+
+  int display(){
+  cout<<"no="<<no<<"\n name="<<name<<" \n balance"<<balance<<endl;
+  }
+
+};
+ main(){
+Account info[20];
+int n;
+cout<<"no?";
+cin>>n;
+   int a,c;
+char d[10];
+for(int i = 0 ; i<n;i++){
+
+    cout<<" for "<<i+1<<" employee no=?  balance=? name=?";
+    cin>>a>>c;
+    cin>>d;
+    info[i].getdata(a,d,c);
+
+
+}
+
+for(int i = 0 ; i<n;i++){
+    info[i].display();
+}
+}
+
+*/
