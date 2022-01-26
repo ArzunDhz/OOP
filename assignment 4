@@ -193,9 +193,6 @@ ______________________4_________________
 #include <iomanip>
 
 using namespace std;
-int display(int a ,int b);
-
-int larger(int a , int b);
 
 class greaterr{
 private:
@@ -203,7 +200,7 @@ private:
 public:
 
 int larger(int a , int b);
-
+int display(int a, int b );
 
 };
 
@@ -216,7 +213,7 @@ int larger(int a , int b);
 display(x,y);
   }
 
- int display(int a, int b ){
+ int greaterr:: display(int a, int b ){
      if(a>b){
           cout<<"greater="<<a<<"\n smaller "<<b;
      }
@@ -238,7 +235,49 @@ _____________________________5____________________________-
 
 
 
+#include <iostream>
+using namespace std;
 
+class lenght{
+private:
+    int inch ,feet;
+public:
+    void getlength(int a , int b){
+    feet = a ;
+    inch = b;
+
+    }
+
+    void putlenght(){
+    cout<<feet<<"'"<<inch<<"\""<<endl;
+    }
+    friend lenght sum(lenght,lenght);
+
+
+};
+
+lenght sum(lenght l1, lenght l2){
+lenght l3;
+l3.feet = l1.feet+l2.feet;
+l3.inch = l1.inch+l2.inch;
+if(l3.inch>=12){
+l3.feet=l3.feet+l3.inch/12;
+l3.inch=l3.inch%12;
+
+}
+return l3;
+}
+
+int main(){
+lenght L1,L2,L3;
+L1.getlength(1,26);
+L2.getlength(1,6);
+L3 = sum(L1,L2);
+L1.putlenght();
+L2.putlenght();
+L3.putlenght();
+
+}
 
 
 
