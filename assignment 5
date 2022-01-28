@@ -1,0 +1,52 @@
+___________________________________1_________________________________-
+#include <iostream>
+using namespace std;
+
+class Complex{
+private:
+    int real,imaginary;
+public:
+    int getdata(int a, int b){
+
+    real = a;
+    imaginary = b ;
+    }
+
+    int putdata(){
+    cout<<real<<"+"<<imaginary<<"i"<<endl;
+    }
+
+  Complex sum(Complex c1,Complex c2){
+              Complex c3;
+              c3.real= c1.real+c2.real;
+              c3.imaginary=c1.imaginary+c2.imaginary;
+
+               return c3;
+               }
+};
+
+
+
+
+int main(){
+Complex C1,C2,C3;
+int a,b,c,d;
+cout<<"input real and imaginary for 1st:";
+cin>>a>>b;
+C1.getdata(a,b);
+C1.putdata();
+cout<<"input real and imaginary for 2nd:";
+cin>>c>>d;
+C2.getdata(c,d);
+C2.putdata();
+
+
+C3=C3.sum(C1,C2);
+cout<<"Sum of i  real and imaginary  is ";
+C3.putdata();
+
+
+
+
+
+}
