@@ -50,3 +50,76 @@ C3.putdata();
 
 
 }
+
+
+________2_______________________________________
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int a = 0;
+
+class Account{
+private:
+    int no,balance;
+
+public:
+
+  void getdata(int a ,int b){
+  no = a;
+  balance = b;
+  display();
+    }
+
+  void display(){
+   cout<<"  no =  "<<no<<" balance = "<<balance<<endl;
+}
+
+
+
+
+Account send(Account a1, Account a2){
+Account a4;
+if(a1.balance>a){
+ a4.balance=a1.balance-a;
+ a4.no=a1.no;
+    return a4;
+}
+else{
+    cout<<" insufficient funds = "<<a1.balance<<endl;
+}
+
+}
+
+
+Account recieve(Account a1, Account a2){
+Account a3;
+a3.balance=a2.balance + a;
+a3.no=a2.no;
+return a3;
+
+}
+
+};
+
+
+
+int main(){
+Account A1,A2,A3,A4;
+int m;
+A1.getdata(1,50);
+A2.getdata(2,25);
+cout<<"money u want to send";
+cin>>m;
+a=m;
+A4=A4.send(A1,A2);
+A4.display();
+A3=A3.recieve(A1,A2);
+A3.display();
+}
+
+
+
+
+
