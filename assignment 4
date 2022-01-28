@@ -132,8 +132,7 @@ for(int i = 0 ; i<n;i++){
 
 //outside the class
 
- void getdata(int a , char b[20] ,char c[20]);
-int display();
+
 
 class information{
 private:
