@@ -55,11 +55,12 @@ C3.putdata();
 ________2_______________________________________
 
 
+
 #include <iostream>
 #include <string.h>
 using namespace std;
 
-int a = 0;
+int c = 0;
 
 class Account{
 private:
@@ -89,8 +90,8 @@ Account Account ::send(Account a1, Account a2){
 Account a4;
 a4.balance=a1.balance;
  a4.no=a1.no;
-if(a1.balance>a){
- a4.balance=a1.balance-a;
+if(a1.balance>=c){
+ a4.balance=a1.balance-c;
 
     return a4;
 }
@@ -105,8 +106,8 @@ Account Account :: recieve(Account a1, Account a2){
 Account a3;
 a3.balance=a2.balance;
 a3.no=a2.no;
-if(a1.balance>a){
-a3.balance=a2.balance + a;
+if(a1.balance>=c){
+a3.balance=a2.balance + c;
 return a3;
 }
 else{
@@ -122,7 +123,7 @@ A1.getdata(1,50);
 A2.getdata(2,25);
 cout<<"money u want to send from 1st account to second account = ";
 cin>>m;
-a=m;
+c=m;
 A4=A4.send(A1,A2);
 A4.display();
 A3=A3.recieve(A1,A2);
