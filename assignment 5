@@ -131,8 +131,148 @@ A3=A3.recieve(A1,A2);
 A3.display();
 }
 
+_________________________________________3___________________________________
+#include<iostream>
+using namespace std;
 
-// extraaaaa 
+class Test{
+private:
+    int code,price;
+public:
+    int setdata(int a, int b){
+    code =a;
+    price=b;
+    }
+    int display(){
+    cout<<"code = " <<code<<"price = "<<price;
+    }
+};
+
+int main(){
+
+Test obj1;
+obj1.setdata(5,6);
+Test obj2=obj1;
+obj2.display();
+
+
+}
+
+__________________________4______________________________________________
+
+#include<iostream>
+using namespace std;
+
+class Rectangle{
+private:
+    int lenght, breadth;
+public:
+
+    Rectangle(){
+    lenght=0;
+    breadth=0;
+    display();
+
+    }
+
+    Rectangle(int a){
+    lenght=a;
+    breadth=5;
+    display();
+    }
+
+    Rectangle(int a , int b ){
+    lenght=a;
+    breadth=b;
+    display();
+    }
+
+
+    int display(){
+    cout<<"area = "<<lenght*breadth<<endl;
+
+    }
+
+};
+int main(){
+
+    Rectangle A;
+    Rectangle B(5,6);
+    Rectangle C(5);
+
+}
+____________________________________5_______________________________________
+#include<iostream>
+using namespace std;
+class AddAmount{
+private:
+ int amount;
+public:
+    AddAmount(){
+    amount = 50;
+    display();
+    }
+    AddAmount(int a ){
+    amount=50;
+    amount = amount+ a;
+    display();
+    }
+
+    int display(){
+    cout<<"the amount in the piggy bank = "<<amount<<endl;\
+        }
+
+
+};
+
+int main(){
+AddAmount A;
+AddAmount B(70);
+
+}
+________________________________________6______________________________
+#include<iostream>
+using namespace std;
+class Rectangle{
+private:
+    int length, breadth;
+public:
+    int getlenght(){
+    cout<<"input value of lenght"<<endl;
+    cin>>length;
+
+    }
+    int getbreadth(){
+    cout<<"input the value of breadth = "<<endl;
+    cin>>breadth;
+    }
+
+    int area( Rectangle A){
+    cout<<"area = "<<length*A.breadth<<endl;
+
+    }
+};
+
+int main(){
+Rectangle L,B;
+L.getlenght();
+B.getbreadth();
+L.area(B);
+
+}
+
+
+________________________________7_____________________________________
+
+
+
+
+
+
+
+
+
+// extraaaaa ________________________________________________________
 
 #include<iostream>
 #include<string.h>
