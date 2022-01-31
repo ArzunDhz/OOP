@@ -264,6 +264,60 @@ L.area(B);
 
 ________________________________7_____________________________________
 
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class Employee{
+private:
+    int id,salary;
+    char name[10];
+public:
+int getdata(char a[10] , int b ,int c ){
+strcpy(name,a);
+id=b;
+salary=c;
+}
+int display(){
+
+cout<<" \n Name =  "<<name<<"  ID = "<<id<<"  salary = "<<salary<<endl;
+}
+
+
+
+};
+
+int main(){
+
+    Employee info[50],E;
+    int n ;
+    cout<<"no of employee = ";
+    cin>>n;
+
+for(int i = 0 ; i <n ;i++){
+char a[10];
+int c,b ;
+cout<<"For employee no"<<i+1<<endl;
+cout<<"Enter name = ";
+cin>>a;
+cout<<"Enter id =";
+cin>>b;
+cout<<"enter salary =";
+cin>>c;
+info[i].getdata(a,b,c);
+}
+
+
+
+for( int i= 0 ;i<n; i++){
+
+info[i].display();
+
+
+}
+
+}
+_________________8__________________________________________
 
 
 
