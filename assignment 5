@@ -319,6 +319,50 @@ info[i].display();
 }
 _________________8__________________________________________
 
+#include<iostream>
+
+using namespace std;
+
+
+class Add {
+private:
+    int lenght , breadth ,area;
+public:
+    Add(int a , int b ){
+    lenght=a;
+    breadth=b;
+    display();
+    }
+
+     Add(int a , int b, int c , int d ){
+    area=2*(a+b)+2*(c+d);
+    display2();
+    }
+
+    int display(){
+    cout<<" area is"<<2*(lenght+breadth)<<endl;
+    }
+    int display2(){
+    cout<<" SUm of the area is"<<area<<endl;
+    }
+};
+
+int main(){
+    int a,b,c,d;
+    cout<<"input lenght and breadth for 1st rectrangle"<<endl;
+    cin>>a>>b;
+    Add a1(a,b);
+    cout<<"input lenght and breadth for 2nd rectrangle"<<endl;
+    cin>>c>>d;
+    Add b1(c,d);
+Add c1(a,b,c,d);
+
+
+
+
+
+}
+
 
 
 
