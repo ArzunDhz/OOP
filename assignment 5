@@ -216,14 +216,12 @@ ____________________________________5_______________________________________
 using namespace std;
 class AddAmount{
 private:
- int amount;
+ int amount = 50;
 public:
     AddAmount(){
-    amount = 50;
     display();
     }
     AddAmount(int a ){
-    amount=50;
     amount = amount+ a;
     display();
     }
@@ -238,6 +236,8 @@ public:
 int main(){
 AddAmount A;
 AddAmount B(70);
+
+}
 
 }
 ________________________________________6______________________________
