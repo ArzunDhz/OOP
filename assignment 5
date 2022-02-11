@@ -274,59 +274,46 @@ L.area(B);
 
 ________________________________7_____________________________________
 
-#include<iostream>
-#include<string.h>
+#include <iostream>
+#include <string.h>
+
 using namespace std;
 
-class Employee{
-private:
-    int id,salary;
-    char name[10];
+class Employee
+{
+    int id, salary;
+    char name[20];
+
 public:
-int getdata(char a[10] , int b ,int c ){
-strcpy(name,a);
-id=b;
-salary=c;
-}
-int display(){
+    Employee(int i, int s, char n[])
+    {
+        id = i;
+        salary = s;
+        strcpy(name, n);
+    }
 
-cout<<" \n Name =  "<<name<<"  ID = "<<id<<"  salary = "<<salary<<endl;
-}
-
-
-
+    void display()
+    {
+        if (salary > 5000)
+            cout << id << "\t" << salary << "\t" << name << endl;
+    }
 };
 
-int main(){
-
-    Employee info[50],E;
-    int n ;
-    cout<<"no of employee = ";
-    cin>>n;
-
-for(int i = 0 ; i <n ;i++){
-char a[10];
-int c,b ;
-cout<<"For employee no"<<i+1<<endl;
-cout<<"Enter name = ";
-cin>>a;
-cout<<"Enter id =";
-cin>>b;
-cout<<"enter salary =";
-cin>>c;
-info[i].getdata(a,b,c);
-}
-
-
-
-for( int i= 0 ;i<n; i++){
-
-info[i].display();
-
-
-}
-
-}
+int main()
+{
+    Employee e1(1, 4000, "ram");
+    Employee e2(2, 5000, "anish");
+    Employee e3(3, 6000, "gita");
+    Employee e4(4, 7000, "shyam");
+    Employee e5(5, 8000, "hari");
+    cout << "\nEmployees data:\n\n";
+    cout << "id\tsalary\tname\n";
+    cout << "----------------------------" << endl;
+    e1.display();
+    e2.display();
+    e3.display();
+    e4.display();
+    e5.display();
 _________________8__________________________________________
 
 #include<iostream>
@@ -348,7 +335,10 @@ public:
     area=2*(a+b)+2*(c+d);
     display2();
     }
-
+    
+   ~Add(){
+   
+   }
     int display(){
     cout<<" area is"<<2*(lenght+breadth)<<endl;
     }
@@ -379,107 +369,3 @@ Add c1(a,b,c,d);
 
 
 
-
-// extraaaaa ________________________________________________________
-
-#include<iostream>
-#include<string.h>
-using namespace std;
-
-class Account{
-private:
-    char name[10];
-    int no , balance;
-public:
-    int getdata(char a[10] , int b ,int c );
-    int display();
-};
-
-int Account::getdata(char a[10] , int b ,int c ){
-strcpy(name,a);
-no=b;
-balance=c;
-}
-
-int Account::display(){
-cout<<"\n";
-cout<<"  Name =  "<<name<<"  Acc_no =  "<<no<<"  balance = "<<balance<<"$"<<endl;
-}
-
-
-int main(){
-Account info[5];
-char a[10];
-int b,c;
-int n ;
-cout<<"no of customer =";
-cin>>n;
-for(int i=0;i<n;i++)
-{
-cout<<"for costumer"<<i+1<<endl;
-   cout<<"input name = ";
-   cin>>a;
-   cout<<"account number = ";
-   cin>>b;
-   cout<<"balance = ";
-   cin>>c;
-
-   info[i].getdata(a,b,c);
-}
-
-for(int i = 0 ; i<n;i++){
-    info[i].display();
-}
-
-#include <iostream>
-#include <string.h>
-using namespace std;
-class Time{
-private:
-int hr,min;
-
-public:
-void getdata(int a ,int b);
-void display();
-Time sum(Time, Time);
-};
-
-
-  void Time::getdata(int a ,int b){
- hr = a;
- min = b;
-  display();
-    }
-
-  void Time::display(){
-   cout<<"  hr =  "<<hr<<" min= "<<min<<endl;
-}
-
-Time Time::sum(Time t1, Time t2){
-Time t3;
-t3.hr=t1.hr+t2.hr;
-t3.min=t1.min+t2.min;
-if(t3.min>=60){
-    t3.hr=t3.hr+t3.min/60;
-    t3.min=t3.min%60;
-    return t3;
-}
-else{
-    return t3;
-}
-}
-
-
-int main(){
-Time T1,T2,T3;
-T1.getdata(1,50);
-T2.getdata(2,25);
-T3=T3.sum(T1,T2);
-T3.display();
-
-}
-
-
-
-
-}
