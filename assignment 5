@@ -243,32 +243,37 @@ AddAmount B(70);
 ________________________________________6______________________________
 #include<iostream>
 using namespace std;
-class Rectangle{
-private:
-    int length, breadth;
-public:
-    int getlenght(){
-    cout<<"input value of lenght"<<endl;
-    cin>>length;
-
-    }
-    int getbreadth(){
-    cout<<"input the value of breadth = "<<endl;
-    cin>>breadth;
-    }
-
-    int area( Rectangle A){
-    cout<<"area = "<<length*A.breadth<<endl;
-
-    }
+class Rectangle
+{
+	int length,breadth;
+	public:
+		Rectangle(int l,int b)
+		{
+			length=l;
+			breadth=b;
+		}
+	int area()
+	{
+		int a;
+		a=length*breadth;
+		return a;
+	}
+	void display()
+	{
+		cout<<"Area= "<<area()<<endl;
+	}
 };
-
-int main(){
-Rectangle L,B;
-L.getlenght();
-B.getbreadth();
-L.area(B);
-
+main()
+{
+	int l,b;
+	cout<<"Enter length and breadth: ";
+	cin>>l>>b;
+	cout<<"Explicit call: ";
+	Rectangle r=Rectangle(l,b);
+	r.display();
+	cout<<"Implicit call: ";
+	Rectangle r1(l,b);
+	r1.display();	
 }
 
 
