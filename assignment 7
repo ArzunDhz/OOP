@@ -171,4 +171,36 @@ int main()
     n.display();
 }
 
-*/
+-______________________qn 6
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class stringg
+{
+    char a[50] , b [50];
+public:
+ stringg(char A[50] , char B[50])
+    {
+      strcpy(a,A);
+       strcpy(b,B);
+
+    }
+   void operator+()
+    {
+        cout << "\nConcatenation: " << strcat(a,b);
+    }
+
+
+};
+
+
+main()
+{
+ stringg s("arjun","dahal");
+   +s;
+}
+
+
