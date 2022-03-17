@@ -1,0 +1,174 @@
+______________________________________q1
+#include <iostream>
+
+using namespace std;
+ class counter
+ {
+ private :
+    int c = 0 ;
+ public:
+    int operator ++()
+    {
+    ++c;
+
+    }
+
+    int operator ++(int )
+ {
+
+     c++;
+ }
+ void display()
+ {
+ cout<<"c= "<<c;
+
+ }
+ };
+ int main()
+ {
+     counter c;
+     c.display();
+     c++;
+     ++c;
+     c.display();
+
+
+
+ }
+ 
+ 
+ __________________________________________ _q2
+ #include <iostream>
+
+using namespace std;
+
+
+class counter
+{
+    int count ;
+public:
+    counter(){
+    count = 0 ;
+
+    }
+    counter operator ++(){
+        counter c;
+        ++c.count ;
+        return c;
+
+    }
+       counter operator ++(int ){
+        counter c;
+      c.count+=2 ;
+        return c;
+
+    }
+
+    void display( counter c)
+    {
+        cout<<"cout "<< c.count<<endl;
+    }
+
+
+
+};
+
+ main()
+ {
+    counter c ;
+    c.display(c);
+    c=++c;
+    c.display(c);
+    c=c++;
+    c.display(c);
+ }
+________________________________________________________________________qn 5
+
+ #include <iostream>
+
+using namespace std;
+
+class number
+{
+private :
+    int real , imaginary;
+public:
+ void read(int a , int b)
+ {
+     real = a;
+     imaginary = b;
+
+ }
+
+   void display()
+   {
+       cout<<real <<"+"<<imaginary<<"i"<<endl;
+
+   }
+
+   friend  number operator +( number, number);
+};
+
+number operator+(number n1, number n2)
+{
+number n3;
+n3.real = n1.real + n2.real;
+n3.imaginary = n1.imaginary+n2.imaginary;
+return n3;
+}
+
+int main()
+{
+number m,n;
+m.read(5,6);
+n.read(7,8);
+m = m + n ;
+m.display();
+
+}
+*/
+________________________________________________________________q3
+ #include <iostream>
+
+using namespace std;
+
+class number
+{
+    int num;
+
+public:
+    number()
+    {
+        num = 7 ;
+    }
+
+    number operator++()
+    {
+        number n;
+        n.num+=5;
+        return n;
+    }
+    number operator++(int)
+    {
+         number n;
+        n.num+=15;
+        return n;
+
+    }
+    void display()
+    {
+        cout<<"number = "<<num<<endl;
+    }
+
+};
+int main()
+{
+    number n ;
+    n.display();
+    n=++n;
+    n.display();
+    n=n++;
+    n.display();
+}
+
+*/
